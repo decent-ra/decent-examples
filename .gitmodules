@@ -1,0 +1,15 @@
+[submodule "DecentHT/libs/tclap"]
+	path = DecentHT/libs/tclap
+	url = https://git.code.sf.net/p/tclap/code
+[submodule "DecentHT/libs/decent-ra-api"]
+	path = DecentHT/libs/decent-ra-api
+	url = git@github.com:decent-ra/decent-ra-api.git
+[submodule "DecentRide/libs/tclap"]
+	path = DecentRide/libs/tclap
+	url = https://git.code.sf.net/p/tclap/code
+[submodule "DecentRide/libs/decent-ra-api"]
+	path = DecentRide/libs/decent-ra-api
+	url = git@github.com:decent-ra/decent-ra-api.git
+[submodule "DecentBench/libs/decent-ra-api"]
+	path = DecentBench/libs/decent-ra-api
+	url = git@github.com:decent-ra/decent-ra-api.git

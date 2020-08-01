@@ -1,0 +1,4 @@
+# Generated Binaries for C Binding
+*.jar
+*.dll
+*.so

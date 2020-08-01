@@ -1,0 +1,9 @@
+enclave
+{
+	from "decent_dht.edl" import *;
+
+	trusted
+	{
+
+	};
+};

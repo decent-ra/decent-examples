@@ -1,0 +1,40 @@
+enclave
+{
+	include "sgx_key_exchange.h"
+	include "sgx_trts.h"
+	
+	from "sgx_ra_client.edl" import *;
+	from "sgx_ra_sp.edl" import *;
+	from "decent_tools.edl" import *;
+	from "decent_net.edl" import *;
+	from "decent_ra_app.edl" import *;
+	from "decent_file_system.edl" import *;
+
+	trusted 
+	{
+		public int  ecall_decent_dht_init(uint64_t self_addr, int is_first_node, uint64_t ex_addr, size_t totalNode, size_t idx, [user_check] void* ias_cntor, [in] const sgx_spid_t* spid, uint64_t enclave_Id);
+		public void ecall_decent_dht_deinit();
+		public int  ecall_decent_dht_proc_msg_from_dht([user_check] void* connection, [out] void** prev_held_cnt);
+		public int  ecall_decent_dht_proc_msg_from_store([user_check] void* connection);
+		public int  ecall_decent_dht_proc_msg_from_app([user_check] void* connection);
+		public int  ecall_decent_dht_proc_msg_from_user([user_check] void* connection);
+
+		public int  ecall_decent_dht_forward_queue_worker();
+		public int  ecall_decent_dht_reply_queue_worker();
+		public void ecall_decent_dht_terminate_workers();
+	};
+	
+	untrusted
+	{
+		void* ocall_decent_dht_cnt_mgr_get_dht(uint64_t address);
+		void* ocall_decent_dht_cnt_mgr_get_store(uint64_t address);
+
+		void* ocall_decent_dht_mem_store_init();
+		void  ocall_decent_dht_mem_store_deinit([user_check] void* ptr);
+		
+		int      ocall_decent_dht_mem_store_save([user_check] void* obj, [in, string] const char* key, [in, size=val_size] const uint8_t* val_ptr, size_t val_size);
+		uint8_t* ocall_decent_dht_mem_store_read([user_check] void* obj, [in, string] const char* key, [out] size_t* val_size);
+		int      ocall_decent_dht_mem_store_dele([user_check] void* obj, [in, string] const char* key);
+		uint8_t* ocall_decent_dht_mem_store_migrate_one([user_check] void* obj, [in, string] const char* key, [out] size_t* val_size);
+	};
+};

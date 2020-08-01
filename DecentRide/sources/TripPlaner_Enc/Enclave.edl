@@ -1,0 +1,15 @@
+enclave
+{
+	from "ride_share.edl" import *;
+
+	trusted
+	{
+		public int ecall_ride_share_tp_from_pas([user_check] void* connection);
+	};
+
+	untrusted
+	{
+		void* ocall_ride_share_cnt_mgr_get_pas_mgm();
+		void* ocall_ride_share_cnt_mgr_get_billing();
+	};
+};
