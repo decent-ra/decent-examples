@@ -1,5 +1,9 @@
 # decent-examples
 
+## NOTE
+
+We've noticed a change in the latest version of the build tool and a staled 3rd party library may cause the build process to fail. We're working on updating the dependency, and the fix will be released shortly.
+
 ## DecentHT
 
 Distributed Hash Table built with Decent
