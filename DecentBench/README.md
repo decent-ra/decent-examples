@@ -60,7 +60,9 @@ mvn -pl site.ycsb:decentdht-nonenclave-binding -am clean package
 3. `TesterSuit\YcsbTester_Client.py` and `TesterSuit\YcsbTester_Server.py` only accept configuration files (with `--config` option)
 	- We provide example configuration files in `TesterSuit\exp_<side>_config.ycsb.test.json`
 	- You may fill in the missing part (already annoted), and adjust other parameters to create your own configurations based on your testing environment
+	- You also need to fill in `Config.json` with the correct enclave hash for both DecentHT server and client (same as the one used in DecentHT debugging client)
 	- For accuracy, both python scripts need to be run with administrator privilige in order to set CPU affinity and priority
+	- For accuracy, make sure you have built solution in Release mode
 	- Ensure all corresponding binaries, enclave binaries, `Config.json` are copied to the working directory
 
 ### If you want to try "SGX-Only" version
