@@ -1,0 +1,153 @@
+{
+	"ClientTests" :
+	[
+		{
+			"__comment" : "1. DECENT RA, 3 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"YcsbHome" : "<Path to YCSB directory>",
+			"OutputDirectory" : "<Path to output directory>",
+			"Target" :
+			{
+				"BindingName" : "decentdht",
+				"ServerPortStart" : 57756,
+				"Priority" : "RealTime"
+			},
+			"SysSvc" :
+			{
+				"BinList" : [],
+				"Priority" : "High"
+			},
+			"Tester" :
+			{
+				"SvrAddr" : "<Server IP Address>",
+				"SvrPort" : 57719
+			},
+			"Test" :
+			{
+				"ThreadCountList" : [50],
+				"OpPerSessionList" : [10],
+				"TargetThroughputList" : [200, 250, 300, 310, 320, 330, 340, 350, -1],
+				"NumOfNodeList" : [3],
+				"WorkloadType" : "workloadb",
+				"DistType" : "uniform",
+				"RecordCount" : 3000,
+				"MaxOpCount" : 6000000,
+				"MaxTime" : 150,
+				"AttemptCount" : 3,
+				"TotalNumOfClient" : 1,
+				"ClientIdx" : 0
+			}
+		},
+		{
+			"__comment" : "2. DECENT RA, 4 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"YcsbHome" : "<Path to YCSB directory>",
+			"OutputDirectory" : "<Path to output directory>",
+			"Target" :
+			{
+				"BindingName" : "decentdht",
+				"ServerPortStart" : 57756,
+				"Priority" : "RealTime"
+			},
+			"SysSvc" :
+			{
+				"BinList" : [],
+				"Priority" : "High"
+			},
+			"Tester" :
+			{
+				"SvrAddr" : "<Server IP Address>",
+				"SvrPort" : 57720
+			},
+			"Test" :
+			{
+				"ThreadCountList" : [50],
+				"OpPerSessionList" : [10],
+				"TargetThroughputList" : [200, 250, 310, 320, 330, 340, 350, 360, -1],
+				"NumOfNodeList" : [4],
+				"WorkloadType" : "workloadb",
+				"DistType" : "uniform",
+				"RecordCount" : 3000,
+				"MaxOpCount" : 6000000,
+				"MaxTime" : 150,
+				"AttemptCount" : 3,
+				"TotalNumOfClient" : 1,
+				"ClientIdx" : 0
+			}
+		},
+		{
+			"__comment" : "3. DECENT RA, 5 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"YcsbHome" : "<Path to YCSB directory>",
+			"OutputDirectory" : "<Path to output directory>",
+			"Target" :
+			{
+				"BindingName" : "decentdht",
+				"ServerPortStart" : 57756,
+				"Priority" : "RealTime"
+			},
+			"SysSvc" :
+			{
+				"BinList" : [],
+				"Priority" : "High"
+			},
+			"Tester" :
+			{
+				"SvrAddr" : "<Server IP Address>",
+				"SvrPort" : 57721
+			},
+			"Test" :
+			{
+				"ThreadCountList" : [50],
+				"OpPerSessionList" : [10],
+				"TargetThroughputList" : [250, 300, 320, 330, 340, 350, 360, 370, -1],
+				"NumOfNodeList" : [5],
+				"WorkloadType" : "workloadb",
+				"DistType" : "uniform",
+				"RecordCount" : 3000,
+				"MaxOpCount" : 6000000,
+				"MaxTime" : 150,
+				"AttemptCount" : 3,
+				"TotalNumOfClient" : 1,
+				"ClientIdx" : 0
+			}
+		},
+		{
+			"__comment" : "4. DECENT RA, 6 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"YcsbHome" : "<Path to YCSB directory>",
+			"OutputDirectory" : "<Path to output directory>",
+			"Target" :
+			{
+				"BindingName" : "decentdht",
+				"ServerPortStart" : 57756,
+				"Priority" : "RealTime"
+			},
+			"SysSvc" :
+			{
+				"BinList" : [],
+				"Priority" : "High"
+			},
+			"Tester" :
+			{
+				"SvrAddr" : "<Server IP Address>",
+				"SvrPort" : 57722
+			},
+			"Test" :
+			{
+				"ThreadCountList" : [50],
+				"OpPerSessionList" : [10],
+				"TargetThroughputList" : [250, 300, 330, 340, 350, 360, 370, 380, -1],
+				"NumOfNodeList" : [6],
+				"WorkloadType" : "workloadb",
+				"DistType" : "uniform",
+				"RecordCount" : 3000,
+				"MaxOpCount" : 6000000,
+				"MaxTime" : 150,
+				"AttemptCount" : 3,
+				"TotalNumOfClient" : 1,
+				"ClientIdx" : 0
+			}
+		}
+	]
+}

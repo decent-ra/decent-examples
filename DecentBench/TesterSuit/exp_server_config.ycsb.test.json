@@ -1,0 +1,60 @@
+{
+	"ServerTests" : [
+		{
+			"__comment" : "1. DECENT RA, 3 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"TargetBin" : "DecentDht_App",
+			"TargetAffinity" : [[1], [3], [4], [5], [6], [7]],
+			"TargetPriority" : "RealTime",
+			"TargetPortStart" : 57756,
+			"SysSvcBinList" : ["aesm_service", "WmiPrvSE", "python"],
+			"SysSvcAffinityMode" : "All",
+			"SysSvcAffinity" : [0, 2],
+			"SysSvcPriority" : "High",
+			"TesterSvrAddr" : "",
+			"TesterSvrPort" : 57719
+		},
+		{
+			"__comment" : "2. DECENT RA, 4 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"TargetBin" : "DecentDht_App",
+			"TargetAffinity" : [[1], [3], [4], [5], [6], [7]],
+			"TargetPriority" : "RealTime",
+			"TargetPortStart" : 57756,
+			"SysSvcBinList" : ["aesm_service", "WmiPrvSE", "python"],
+			"SysSvcAffinityMode" : "All",
+			"SysSvcAffinity" : [0, 2],
+			"SysSvcPriority" : "High",
+			"TesterSvrAddr" : "",
+			"TesterSvrPort" : 57720
+		},
+		{
+			"__comment" : "3. DECENT RA, 5 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"TargetBin" : "DecentDht_App",
+			"TargetAffinity" : [[1], [3], [4], [5], [6], [7]],
+			"TargetPriority" : "RealTime",
+			"TargetPortStart" : 57756,
+			"SysSvcBinList" : ["aesm_service", "WmiPrvSE", "python"],
+			"SysSvcAffinityMode" : "All",
+			"SysSvcAffinity" : [0, 2],
+			"SysSvcPriority" : "High",
+			"TesterSvrAddr" : "",
+			"TesterSvrPort" : 57721
+		},
+		{
+			"__comment" : "4. DECENT RA, 6 nodes",
+			"WorkDirectory" : "<Path to working directory containing binaries>",
+			"TargetBin" : "DecentDht_App",
+			"TargetAffinity" : [[1], [3], [4], [5], [6], [7]],
+			"TargetPriority" : "RealTime",
+			"TargetPortStart" : 57756,
+			"SysSvcBinList" : ["aesm_service", "WmiPrvSE", "python"],
+			"SysSvcAffinityMode" : "All",
+			"SysSvcAffinity" : [0, 2],
+			"SysSvcPriority" : "High",
+			"TesterSvrAddr" : "",
+			"TesterSvrPort" : 57722
+		}
+	]
+}
